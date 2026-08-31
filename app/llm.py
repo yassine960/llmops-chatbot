@@ -3,16 +3,20 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
 
+print("Loading tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
+print("Loading model...")
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
     torch_dtype="auto",
     device_map="auto",
 )
 
+print("Model loaded!")
 
-def generate_response(message: str) -> str:
+
+def generate_response(message: str) -> tuple[str, int, int]:
     messages = [
         {
             "role": "system",
@@ -35,6 +39,8 @@ def generate_response(message: str) -> str:
         return_tensors="pt",
     ).to(model.device)
 
+    input_tokens = inputs.input_ids.shape[1]
+
     outputs = model.generate(
         **inputs,
         max_new_tokens=200,
@@ -42,7 +48,11 @@ def generate_response(message: str) -> str:
 
     generated_ids = outputs[:, inputs.input_ids.shape[1]:]
 
-    return tokenizer.batch_decode(
+    output_tokens = generated_ids.shape[1]
+
+    response = tokenizer.batch_decode(
         generated_ids,
         skip_special_tokens=True,
     )[0]
+
+    return response, input_tokens, output_tokens

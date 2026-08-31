@@ -3,4 +3,6 @@ uvicorn
 accelerate
 torch
 transformers
+prometheus-client
+
 
