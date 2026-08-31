@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  PYTHONPATH: .
+
 jobs:
   test:
     runs-on: ubuntu-latest
