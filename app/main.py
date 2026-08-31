@@ -4,7 +4,6 @@ from fastapi import FastAPI
 from prometheus_client import make_asgi_app
 from pydantic import BaseModel
 
-from app.llm import generate_response
 from app.metrics import (
     LLM_ERRORS,
     LLM_INPUT_TOKENS,
@@ -32,6 +31,7 @@ def health():
 
 @app.post("/chat")
 def chat(request: ChatRequest):
+    from app.llm import generate_response
     LLM_REQUESTS.inc()
 
     start_time = time.perf_counter()
