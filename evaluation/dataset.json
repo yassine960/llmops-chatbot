@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is Docker?",
+    "keywords": ["container", "image"]
+  },
+  {
+    "question": "What is an API?",
+    "keywords": ["interface", "application"]
+  },
+  {
+    "question": "What is Python?",
+    "keywords": ["programming", "language"]
+  },
+  {
+    "question": "What is FastAPI?",
+    "keywords": ["python", "api"]
+  },
+  {
+    "question": "What is Git?",
+    "keywords": ["version", "control"]
+  },
+  {
+    "question": "What is GitHub?",
+    "keywords": ["repository", "code"]
+  },
+  {
+    "question": "What is CI/CD?",
+    "keywords": ["integration", "deployment"]
+  },
+  {
+    "question": "What is Kubernetes?",
+    "keywords": ["container", "orchestration"]
+  },
+  {
+    "question": "What is a container?",
+    "keywords": ["isolated", "application"]
+  },
+  {
+    "question": "What is Linux?",
+    "keywords": ["operating", "system"]
+  },
+  {
+    "question": "What is HTTP?",
+    "keywords": ["protocol", "web"]
+  },
+  {
+    "question": "What is JSON?",
+    "keywords": ["data", "format"]
+  },
+  {
+    "question": "What is Prometheus?",
+    "keywords": ["metrics", "monitoring"]
+  },
+  {
+    "question": "What is Grafana?",
+    "keywords": ["dashboard", "monitoring"]
+  },
+  {
+    "question": "What is machine learning?",
+    "keywords": ["data", "model"]
+  },
+  {
+    "question": "What is an LLM?",
+    "keywords": ["language", "model"]
+  },
+  {
+    "question": "What is a neural network?",
+    "keywords": ["network", "neurons"]
+  },
+  {
+    "question": "What is software testing?",
+    "keywords": ["test", "software"]
+  },
+  {
+    "question": "What is a database?",
+    "keywords": ["data", "storage"]
+  },
+  {
+    "question": "What is cloud computing?",
+    "keywords": ["internet", "computing"]
+  }
+]
